@@ -1,5 +1,5 @@
 {
-  "source_recording": "/Users/macbookpro/alice/hackathon/NavSahay/python/data/V-S1.csv",
+  "source_recording": "python/data/V-S1.csv",
   "source_row_range": "1600 - 1850",
   "source_time_range_sec": "33029.0 - 33053.9",
   "sampling_rate_hz": 10.0,

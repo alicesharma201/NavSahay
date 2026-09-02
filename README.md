@@ -68,11 +68,18 @@ The Phase 1 implementation comprises two decoupled, validated components:
 
 ---
 
-## Phase 1 Dataset
+## Phase 1 Dataset & Attribution
 
-Phase 1 uses the peer-reviewed **IO-VNBD** (Input-Output Vehicle Navigation Benchmark Dataset):
-* **File Used**: `python/data/V-S1.csv` (10.0 MB, 51,747 rows, sampled at verified $10.0\text{ Hz}$).
-* **Source Context**: Real-world driving recording with synchronized vehicle OBD/CAN telemetry (indicated vehicle speed, yaw rate, wheel speeds) and dual-frequency reference GPS.
+Phase 1 of NavSahay uses trial data from the open **IO-VNBD** (Input-Output Vehicle Navigation Benchmark Dataset):
+
+> Onyekpe, U., Palade, V., Kanarachos, S., & Szkolnik, A. (2021).  
+> "IO-VNBD: Inertial and Odometry benchmark dataset for ground vehicle positioning."  
+> *Data in Brief*, 35, 106885. [https://doi.org/10.1016/j.dib.2021.106885](https://doi.org/10.1016/j.dib.2021.106885)
+
+* **Upstream Repository**: [https://github.com/onyekpeu/IO-VNBD](https://github.com/onyekpeu/IO-VNBD)
+* **License**: [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)
+* **Included Sequence**: `python/data/V-S1.csv` (10.0 MB, 51,747 rows, sampled at verified $10.0\text{ Hz}$) is an unedited trial sequence from the upstream dataset recorded from a research vehicle's CAN bus and dual-frequency reference GPS in Coventry, UK.
+* **Disclaimer**: NavSahay does not claim ownership of the dataset.
 
 ---
 
