@@ -1,0 +1,17 @@
+{
+  "source_recording": "/Users/macbookpro/alice/hackathon/NavSahay/python/data/V-S1.csv",
+  "source_row_range": "1600 - 1850",
+  "source_time_range_sec": "33029.0 - 33053.9",
+  "sampling_rate_hz": 10.0,
+  "total_duration_sec": 24.9,
+  "total_distance_travelled_m": 268.89,
+  "outage_start_sec": 5.0,
+  "outage_end_sec": 20.0,
+  "outage_duration_sec": 15.0,
+  "distance_travelled_during_outage_m": 164.0,
+  "outage_rmse_m": 3.361,
+  "maximum_outage_error_m": 5.277,
+  "final_outage_error_m": 5.277,
+  "drift_percentage": 3.22,
+  "overall_rmse_m": 2.614
+}

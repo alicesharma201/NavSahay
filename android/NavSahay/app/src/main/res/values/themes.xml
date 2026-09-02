@@ -1,0 +1,7 @@
+<resources>
+    <style name="Theme.NavSahay" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:statusBarColor">#0B0F19</item>
+        <item name="android:navigationBarColor">#0B0F19</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+</resources>

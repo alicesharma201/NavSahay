@@ -1,0 +1,34 @@
+# OS Files
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# Python
+__pycache__/
+*.py[cod]
+*.class
+.venv/
+venv/
+env/
+*.egg-info/
+.pytest_cache/
+python/output/
+
+# Android / Gradle Build Outputs & Caches
+.gradle/
+build/
+**/build/
+local.properties
+.idea/
+*.iml
+.cxx/
+*.apk
+*.aab
+captures/
+.externalNativeBuild/
+
+# Environment / Secrets
+.env
+*.key
+*.pem
