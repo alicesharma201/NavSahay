@@ -1,7 +1,9 @@
-<resources>
-    <style name="Theme.NavSahay" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <item name="android:statusBarColor">#0B0F19</item>
-        <item name="android:navigationBarColor">#0B0F19</item>
-        <item name="android:windowLightStatusBar">false</item>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.NavSahay" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:statusBarColor">#F8FAFC</item>
+        <item name="android:navigationBarColor">#F8FAFC</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="27">true</item>
+        <item name="android:windowBackground">#F8FAFC</item>
     </style>
 </resources>

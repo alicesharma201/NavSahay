@@ -121,17 +121,19 @@ class MainActivity : AppCompatActivity(), ReplayListener {
 
     private fun updateTelemetry(sample: NavigationSample, index: Int, total: Int) {
         if (sample.isGnssDenied) {
-            statusCard.setCardBackgroundColor(Color.parseColor("#2A1215"))
+            statusCard.setCardBackgroundColor(Color.parseColor("#FEF2F2"))
             statusCard.strokeColor = Color.parseColor("#EF4444")
             statusTitle.text = "🔴 GNSS DENIED — DEAD RECKONING ACTIVE"
-            statusTitle.setTextColor(Color.parseColor("#EF4444"))
+            statusTitle.setTextColor(Color.parseColor("#B91C1C"))
             statusSubtitle.text = "Inertial & Wheel-Speed Propagation Active (GPS Masked)"
+            statusSubtitle.setTextColor(Color.parseColor("#475569"))
         } else {
-            statusCard.setCardBackgroundColor(Color.parseColor("#0D2818"))
+            statusCard.setCardBackgroundColor(Color.parseColor("#ECFDF5"))
             statusCard.strokeColor = Color.parseColor("#10B981")
             statusTitle.text = "🟢 GNSS AVAILABLE"
-            statusTitle.setTextColor(Color.parseColor("#10B981"))
+            statusTitle.setTextColor(Color.parseColor("#047857"))
             statusSubtitle.text = "GPS Position Fix & EKF Measurement Update Nominal"
+            statusSubtitle.setTextColor(Color.parseColor("#475569"))
         }
 
         tvSpeed.text = String.format("%.1f km/h", sample.speedKmh)

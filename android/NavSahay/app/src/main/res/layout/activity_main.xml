@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0B0F19"
+    android:background="#F8FAFC"
     android:orientation="vertical"
     android:padding="14dp">
 
@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="NAVSAHAY"
-            android:textColor="#F8FAFC"
+            android:textColor="#0F172A"
             android:textSize="20sp"
             android:textStyle="bold"
             android:letterSpacing="0.05" />
@@ -32,7 +32,7 @@
             android:paddingHorizontal="8dp"
             android:paddingVertical="3dp"
             android:text="SIH PROTOTYPE"
-            android:textColor="#38BDF8"
+            android:textColor="#0369A1"
             android:textSize="11sp"
             android:textStyle="bold" />
     </LinearLayout>
@@ -41,19 +41,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Vehicle GNSS-Denied Dead Reckoning Demonstration"
-        android:textColor="#94A3B8"
+        android:textColor="#64748B"
         android:textSize="12sp"
         android:layout_marginBottom="8dp" />
 
-    <!-- Trajectory Map View -->
+    <!-- Trajectory Map View Card -->
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        app:cardBackgroundColor="#0F172A"
+        app:cardBackgroundColor="#FFFFFF"
         app:cardCornerRadius="12dp"
         app:cardElevation="0dp"
-        app:strokeColor="#1E293B"
+        app:strokeColor="#E2E8F0"
         app:strokeWidth="1dp">
 
         <com.navsahay.app.ui.TrajectoryMapView
@@ -68,7 +68,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        app:cardBackgroundColor="#0D2818"
+        app:cardBackgroundColor="#ECFDF5"
         app:cardCornerRadius="10dp"
         app:cardElevation="0dp"
         app:strokeColor="#10B981"
@@ -85,7 +85,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="🟢 GNSS AVAILABLE"
-                android:textColor="#10B981"
+                android:textColor="#047857"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -95,7 +95,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
                 android:text="GPS Position Fix &amp; EKF Measurement Update Nominal"
-                android:textColor="#CBD5E1"
+                android:textColor="#475569"
                 android:textSize="11sp" />
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
@@ -116,10 +116,10 @@
             android:layout_columnWeight="1"
             android:layout_marginEnd="4dp"
             android:layout_marginBottom="6dp"
-            app:cardBackgroundColor="#131C2E"
+            app:cardBackgroundColor="#FFFFFF"
             app:cardCornerRadius="8dp"
             app:cardElevation="0dp"
-            app:strokeColor="#1E293B"
+            app:strokeColor="#E2E8F0"
             app:strokeWidth="1dp">
 
             <LinearLayout
@@ -142,7 +142,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="2dp"
                     android:text="34.3 km/h"
-                    android:textColor="#F8FAFC"
+                    android:textColor="#0F172A"
                     android:textSize="15sp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -155,10 +155,10 @@
             android:layout_columnWeight="1"
             android:layout_marginStart="4dp"
             android:layout_marginBottom="6dp"
-            app:cardBackgroundColor="#131C2E"
+            app:cardBackgroundColor="#FFFFFF"
             app:cardCornerRadius="8dp"
             app:cardElevation="0dp"
-            app:strokeColor="#1E293B"
+            app:strokeColor="#E2E8F0"
             app:strokeWidth="1dp">
 
             <LinearLayout
@@ -181,7 +181,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="2dp"
                     android:text="0.0 m, 0.0 m"
-                    android:textColor="#38BDF8"
+                    android:textColor="#0284C7"
                     android:textSize="13sp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -193,10 +193,10 @@
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
             android:layout_marginEnd="4dp"
-            app:cardBackgroundColor="#131C2E"
+            app:cardBackgroundColor="#FFFFFF"
             app:cardCornerRadius="8dp"
             app:cardElevation="0dp"
-            app:strokeColor="#1E293B"
+            app:strokeColor="#E2E8F0"
             app:strokeWidth="1dp">
 
             <LinearLayout
@@ -219,7 +219,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="2dp"
                     android:text="0.00 m"
-                    android:textColor="#F59E0B"
+                    android:textColor="#D97706"
                     android:textSize="15sp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -231,10 +231,10 @@
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
             android:layout_marginStart="4dp"
-            app:cardBackgroundColor="#131C2E"
+            app:cardBackgroundColor="#FFFFFF"
             app:cardCornerRadius="8dp"
             app:cardElevation="0dp"
-            app:strokeColor="#1E293B"
+            app:strokeColor="#E2E8F0"
             app:strokeWidth="1dp">
 
             <LinearLayout
@@ -257,7 +257,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="2dp"
                     android:text="±2.8 m"
-                    android:textColor="#E879F9"
+                    android:textColor="#7C3AED"
                     android:textSize="15sp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -276,7 +276,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="t = 0.0 s / 24.9 s  (Sample 1/250)"
-            android:textColor="#94A3B8"
+            android:textColor="#64748B"
             android:textSize="11sp"
             android:fontFamily="monospace"
             android:gravity="center" />
@@ -305,6 +305,7 @@
             android:layout_weight="1"
             android:layout_marginEnd="4dp"
             android:background="@drawable/btn_primary"
+            app:backgroundTint="@null"
             android:text="▶ START"
             android:textColor="#FFFFFF"
             android:textSize="13sp"
@@ -317,9 +318,10 @@
             android:layout_weight="1"
             android:layout_marginHorizontal="4dp"
             android:background="@drawable/btn_secondary"
+            app:backgroundTint="@null"
             android:enabled="false"
             android:text="⏸ PAUSE"
-            android:textColor="#CBD5E1"
+            android:textColor="#334155"
             android:textSize="13sp"
             android:textStyle="bold" />
 
@@ -330,9 +332,10 @@
             android:layout_weight="1"
             android:layout_marginStart="4dp"
             android:background="@drawable/btn_secondary"
+            app:backgroundTint="@null"
             android:enabled="false"
             android:text="🔄 RESET"
-            android:textColor="#CBD5E1"
+            android:textColor="#334155"
             android:textSize="13sp"
             android:textStyle="bold" />
     </LinearLayout>

@@ -33,19 +33,19 @@ class TrajectoryMapView @JvmOverloads constructor(
     private val estPathAvailablePost = Path()
 
     private val gridPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
-        color = Color.parseColor("#1E293B")
+        color = Color.parseColor("#E2E8F0")
         strokeWidth = 1.5f
         style = Paint.Style.STROKE
     }
 
     private val textPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
-        color = Color.parseColor("#64748B")
+        color = Color.parseColor("#94A3B8")
         textSize = 26f
         typeface = Typeface.MONOSPACE
     }
 
     private val refPathPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
-        color = Color.parseColor("#475569")
+        color = Color.parseColor("#94A3B8")
         strokeWidth = 4.0f
         style = Paint.Style.STROKE
         pathEffect = DashPathEffect(floatArrayOf(12f, 8f), 0f)
@@ -68,24 +68,24 @@ class TrajectoryMapView @JvmOverloads constructor(
     }
 
     private val uncertaintyPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
-        color = Color.parseColor("#2AEF4444")
+        color = Color.parseColor("#20EF4444")
         style = Paint.Style.FILL
     }
 
     private val uncertaintyStrokePaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
-        color = Color.parseColor("#88EF4444")
+        color = Color.parseColor("#60EF4444")
         strokeWidth = 2.0f
         style = Paint.Style.STROKE
         pathEffect = DashPathEffect(floatArrayOf(8f, 6f), 0f)
     }
 
     private val vehicleCorePaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
-        color = Color.parseColor("#38BDF8")
+        color = Color.parseColor("#0284C7")
         style = Paint.Style.FILL
     }
 
     private val vehiclePulsePaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
-        color = Color.parseColor("#6038BDF8")
+        color = Color.parseColor("#400284C7")
         strokeWidth = 3f
         style = Paint.Style.STROKE
     }
@@ -95,7 +95,7 @@ class TrajectoryMapView @JvmOverloads constructor(
     }
 
     private val arrowPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
-        color = Color.WHITE
+        color = Color.parseColor("#0F172A")
         strokeWidth = 4f
     }
 
@@ -213,7 +213,7 @@ class TrajectoryMapView @JvmOverloads constructor(
 
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
-        canvas.drawColor(Color.parseColor("#0B0F19"))
+        canvas.drawColor(Color.parseColor("#FFFFFF"))
 
         if (allSamples.isEmpty()) return
 
@@ -230,11 +230,11 @@ class TrajectoryMapView @JvmOverloads constructor(
 
             val radiusPx = (s.uncertaintyMeters.toFloat() * scale).coerceAtLeast(8f)
             if (s.isGnssDenied) {
-                uncertaintyPaint.color = Color.parseColor("#2AEF4444")
-                uncertaintyStrokePaint.color = Color.parseColor("#88EF4444")
+                uncertaintyPaint.color = Color.parseColor("#20EF4444")
+                uncertaintyStrokePaint.color = Color.parseColor("#60EF4444")
             } else {
-                uncertaintyPaint.color = Color.parseColor("#2A10B981")
-                uncertaintyStrokePaint.color = Color.parseColor("#8810B981")
+                uncertaintyPaint.color = Color.parseColor("#2010B981")
+                uncertaintyStrokePaint.color = Color.parseColor("#6010B981")
             }
             canvas.drawCircle(vx, vy, radiusPx, uncertaintyPaint)
             canvas.drawCircle(vx, vy, radiusPx, uncertaintyStrokePaint)
@@ -278,14 +278,14 @@ class TrajectoryMapView @JvmOverloads constructor(
             val s5 = allSamples[50]
             val x5 = toScreenX(s5.groundTruthX.toFloat())
             val y5 = toScreenY(s5.groundTruthY.toFloat())
-            markerPaint.color = Color.parseColor("#3B82F6")
+            markerPaint.color = Color.parseColor("#2563EB")
             canvas.drawCircle(x5, y5, 7f, markerPaint)
         }
         if (allSamples.size > 200) {
             val s20 = allSamples[200]
             val x20 = toScreenX(s20.groundTruthX.toFloat())
             val y20 = toScreenY(s20.groundTruthY.toFloat())
-            markerPaint.color = Color.parseColor("#A855F7")
+            markerPaint.color = Color.parseColor("#7C3AED")
             canvas.drawCircle(x20, y20, 7f, markerPaint)
         }
     }
