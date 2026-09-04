@@ -4,6 +4,7 @@ import android.Manifest
 import android.content.pm.PackageManager
 import android.graphics.Color
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.ProgressBar
 import android.widget.TextView
@@ -42,10 +43,14 @@ class MainActivity : AppCompatActivity(), ReplayListener {
     private val locationPermissionLauncher = registerForActivityResult(
         ActivityResultContracts.RequestMultiplePermissions()
     ) { permissions ->
-        val granted = permissions[Manifest.permission.ACCESS_FINE_LOCATION] == true ||
-                permissions[Manifest.permission.ACCESS_COARSE_LOCATION] == true
-        if (granted) {
+        val fineGranted = permissions[Manifest.permission.ACCESS_FINE_LOCATION] ?: false
+        val coarseGranted = permissions[Manifest.permission.ACCESS_COARSE_LOCATION] ?: false
+
+        if (fineGranted || coarseGranted) {
+            Log.d("MainActivity", "Location permission granted. Starting sensors.")
             sensorAcquisitionManager.start()
+        } else {
+            Log.w("MainActivity", "Location permission denied. Proceeding without location access.")
         }
     }
 
@@ -57,6 +62,8 @@ class MainActivity : AppCompatActivity(), ReplayListener {
         loadData()
         setupListeners()
         setupSensors()
+
+        checkAndRequestPermissions()
     }
 
     private fun bindViews() {
@@ -106,7 +113,9 @@ class MainActivity : AppCompatActivity(), ReplayListener {
 
     override fun onResume() {
         super.onResume()
-        checkPermissionsAndStartSensors()
+        if (hasLocationPermissions()) {
+            sensorAcquisitionManager.start()
+        }
     }
 
     override fun onPause() {
@@ -114,15 +123,22 @@ class MainActivity : AppCompatActivity(), ReplayListener {
         sensorAcquisitionManager.stop()
     }
 
-    private fun checkPermissionsAndStartSensors() {
-        val fineLocationGranted = ContextCompat.checkSelfPermission(
+    private fun hasLocationPermissions(): Boolean {
+        return ContextCompat.checkSelfPermission(
             this,
             Manifest.permission.ACCESS_FINE_LOCATION
+        ) == PackageManager.PERMISSION_GRANTED || ContextCompat.checkSelfPermission(
+            this,
+            Manifest.permission.ACCESS_COARSE_LOCATION
         ) == PackageManager.PERMISSION_GRANTED
+    }
 
-        if (fineLocationGranted) {
+    private fun checkAndRequestPermissions() {
+        if (hasLocationPermissions()) {
+            Log.d("MainActivity", "Location permission already granted.")
             sensorAcquisitionManager.start()
         } else {
+            Log.d("MainActivity", "Requesting location permissions.")
             locationPermissionLauncher.launch(
                 arrayOf(
                     Manifest.permission.ACCESS_FINE_LOCATION,
