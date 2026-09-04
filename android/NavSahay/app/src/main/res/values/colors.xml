@@ -10,5 +10,11 @@
     <color name="status_denied_bg">#FEF2F2</color>
     <color name="status_denied_stroke">#EF4444</color>
     <color name="status_denied_text">#B91C1C</color>
+    <color name="status_assisted_bg">#FFFBEB</color>
+    <color name="status_assisted_stroke">#F59E0B</color>
+    <color name="status_assisted_text">#B45309</color>
+    <color name="status_recovery_bg">#EFF6FF</color>
+    <color name="status_recovery_stroke">#3B82F6</color>
+    <color name="status_recovery_text">#1D4ED8</color>
     <color name="ic_launcher_background">#181923</color>
 </resources>
