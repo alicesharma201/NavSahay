@@ -1,0 +1,33 @@
+# NavSahay Phase 1 Configuration
+
+dataset:
+  path: "data/V-S1.csv"
+  source_name: "IO-VNBD V-S1.csv (Driver A, Vehicle ECU)"
+  sampling_rate_hz: 10.0
+
+segment:
+  start_row: 1600
+  end_row: 1850
+  description: "25-second continuous vehicle turning maneuver (33029.0s - 33053.9s)"
+
+outage:
+  start_time_offset_sec: 5.0
+  end_time_offset_sec: 20.0
+  duration_sec: 15.0
+
+filter:
+  pos_init_std_m: 2.0
+  vel_init_std_mps: 1.0
+  yaw_init_std_rad: 0.1
+  q_pos: 0.02
+  q_vel: 0.1
+  q_yaw: 0.01
+  r_gnss_m: 2.5
+
+output:
+  dir: "output"
+  trajectory_plot: "output/trajectory.png"
+  error_plot: "output/error.png"
+  results_csv: "output/results.csv"
+  metrics_json: "output/metrics.json"
+  demo_route_json: "output/demo_route.json"

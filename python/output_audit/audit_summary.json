@@ -1,0 +1,37 @@
+{
+  "Test_A_Normal": {
+    "outage_dist_gt_m": 164.0,
+    "outage_dist_est_m": 164.3,
+    "outage_rmse_m": 3.361,
+    "max_error_m": 5.277,
+    "final_error_m": 5.277
+  },
+  "Test_B_Zero_Yaw_Rate": {
+    "outage_dist_gt_m": 164.0,
+    "outage_dist_est_m": 164.3,
+    "outage_rmse_m": 43.91,
+    "max_error_m": 89.727,
+    "final_error_m": 89.727
+  },
+  "Test_C_Zero_Speed": {
+    "outage_dist_gt_m": 164.0,
+    "outage_dist_est_m": 0.0,
+    "outage_rmse_m": 86.189,
+    "max_error_m": 156.311,
+    "final_error_m": 156.311
+  },
+  "Test_D_Perturbed_Yaw_Rate": {
+    "outage_dist_gt_m": 164.0,
+    "outage_dist_est_m": 164.3,
+    "outage_rmse_m": 13.65,
+    "max_error_m": 27.689,
+    "final_error_m": 27.689
+  },
+  "Baseline_Naive_DR": {
+    "outage_dist_gt_m": 164.0,
+    "outage_dist_est_m": 164.3,
+    "outage_rmse_m": 5.482,
+    "max_error_m": 9.12,
+    "final_error_m": 9.12
+  }
+}
